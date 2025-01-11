@@ -1,18 +1,26 @@
 body {
-    background-image: url("../assets/images/backg.png");
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url(../assets/images/backg.png);
     background-size: cover;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+body form  {
+    position: relative;
+    background-color: #faebd7de;
+    width: 90vw;
+    min-height: 90vh;
+    /* margin: 5vh auto; */
+    border-radius: 8px;
+    padding: 20px;
 }
 .butterfly {
     position: absolute;
-    top: 1vh;
-}
-body form  {
-    background-color: #faebd7de;
-    width: 90vw;
-    height: 90vh;
-    margin: 5vh auto;
-    border-radius: 8px;
-    padding: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30px;
 }
 body form > div {
     width: 90%;
@@ -26,6 +34,15 @@ body form > div {
 .name > div {
     width: 45%;
 }
+@media (max-width: 550px) {
+    .name {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .name > div {
+        width: 100%;
+    }
+}
 body form > div h2 {
     font-family: sans-serif;
     font-size: 14px;
@@ -35,6 +52,7 @@ body form > div h2 {
     position: relative;
     width: fit-content;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 body form > div h2::after {
     content: "*";
@@ -87,6 +105,15 @@ body form > div input[type="email"] {
 body form > div .radio {
     width: 45%;
 }
+@media(max-width:550px){
+    .query {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    body form > div .radio {
+        width: 100%;
+    }
+}
 body form > div .radio:nth-child(1) {
 
 }
@@ -123,4 +150,5 @@ body form > div input[type="submit"]:focus {
     width: fit-content;
     padding: 2px 8px;
     text-indent: 10px;
+    font-size: 13px;
 }

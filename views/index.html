@@ -8,24 +8,24 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body class="df aic jcc">
-    <img class="butterfly" src="../assets/images/1.svg" alt="butterfly">
     <form action="" class="contact-from df fw">
+        <img class="butterfly" src="../assets/images/1.svg" alt="butterfly">
         <div class="name">
             <div>
                 <h2 for="">first name</h2>
-                <input type="text" required name="first" placeholder="first name ..">
-                <span class="error" id="firstNameError">test for error message Lorem ipsum dolor sit amet consectetur.</span>
+                <input type="text" required name="first" id="first" placeholder="first name ..">
+                <span class="error" id="firstNameError"></span>
             </div>
             <div>
                 <h2>last name</h2>
-                <input type="text" required name="last" placeholder="last name ..">
-                <span class="error" id="lastNameError">test for error message Lorem ipsum dolor sit amet consectetur.</span>
+                <input type="text" required name="last" id="last" placeholder="last name ..">
+                <span class="error" id="lastNameError"></span>
             </div>
         </div>
         <div>
             <h2>email address</h2>
-            <input type="email" required placeholder="for ex : someone@here.com">
-            <span class="error" id="emailError">test for error message Lorem ipsum dolor sit amet consectetur.</span>
+            <input type="email" name="email" id="email" required placeholder="for ex : someone@here.com">
+            <span class="error" id="emailError"></span>
         </div>
         <div>
             <h2>query type</h2>
@@ -39,21 +39,22 @@
                     <label for="support" class="r">support request</label>
                 </div>
             </div>
-            <span class="error" id="queryError">test for error message Lorem ipsum dolor sit amet consectetur.</span>
+            <span class="error" id="queryError"></span>
         </div>
         <div>
             <h2>message</h2>
             <textarea name="message" id="message"></textarea>
-            <span class="error" id="messageError">test for error message Lorem ipsum dolor sit amet consectetur.</span>
+            <span class="error" id="messageError"></span>
         </div>
         <div>
-            <input type="checkbox" value="cookie" id="cookie">
+            <input type="checkbox" value="cookie" id="cookie" name="cookie">
             <label for="cookie" class="cookie">i know that the team will contact me</label>
-            <span class="error" id="cookieError">test for error message Lorem ipsum dolor sit amet consectetur.</span>
+            <span class="error" id="cookieError"></span>
         </div>
         <div>
             <input type="submit" value="submit" id="submit">
         </div>
     </form>
+    <script src="../js/main.js"></script>
 </body>
 </html>
