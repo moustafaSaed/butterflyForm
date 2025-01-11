@@ -12,6 +12,8 @@ submit.addEventListener("click",(a)=>{
     const firstNameError = document.getElementById("firstNameError");
     if(firstName.value == "") {
         firstNameError.textContent = "First Name Required ! ";
+    } else {
+        firstNameError.textContent = "";
     }
 
 
@@ -19,6 +21,8 @@ submit.addEventListener("click",(a)=>{
     const lastNameError = document.getElementById("lastNameError");
     if(lastName.value == "") {
         lastNameError.textContent = "Last Name Required ! ";
+    } else {
+        lastNameError.textContent = "";
     }
 
 
@@ -27,9 +31,17 @@ submit.addEventListener("click",(a)=>{
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if(email.value == "") {
         emailError.textContent = "! Email is Required ..";
-    } else if(emailRegex.test(email.value)) {
-        emailError.textContent = "";
-    } else {
+    } else if(!emailRegex.test(email.value)) {
         emailError.textContent = "! invalid email address";
+    } else {
+        emailError.textContent = "";
+    }
+
+    // query validation 
+    if(!document.querySelector("input[name='query']:checked")) {
+        const queryError = document.getElementById("queryError");
+        queryError.textContent = "! .. you should choose one query";
+    } else {
+        queryError.textContent = "";
     }
 })
